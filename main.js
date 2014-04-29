@@ -1,6 +1,5 @@
 
 // Using NaN instead of null is a clever hack. See checkForWinner for details.
-// Add new comments
 var spaces = [
   NaN, NaN, NaN,
   NaN, NaN, NaN,
@@ -29,11 +28,24 @@ var checkForWinner = function () {
   if ( spaces[0] === spaces[1] && spaces[1] === spaces[2]
     || spaces[3] === spaces[4] && spaces[4] === spaces[5]
     || spaces[6] === spaces[7] && spaces[7] === spaces[8]
+    || spaces[0] === spaces[3] && spaces[3] === spaces[6]
+    || spaces[1] === spaces[4] && spaces[4] === spaces[7]
+    || spaces[2] === spaces[5] && spaces[5] === spaces[8]
+    || spaces[0] === spaces[4] && spaces[4] === spaces[5]
+    || spaces[6] === spaces[4] && spaces[4] === spaces[2]
     // TODO: Check for rest of game winning cases
-  )
+  ) { var result = currentPlayer } else if { spaces[i] }
   {
     console.log('somebody won');
     // TODO: Trigger 'game-win' event with the winning player as the event data
+$(document).on('somebody won', function (e, player1, player2, result) {
+  if (result) {
+
+  }
+})
+
+      }
+    }
   }
 };
 
@@ -52,7 +64,7 @@ $(document).on('click', '#board .space', function (e) {
 });
 
 $(document).on('game-win', function (e, winner) {
-  // TODO: Alert who won the game
+  alert(winner + "won!");
 });
 
 // Start the game
