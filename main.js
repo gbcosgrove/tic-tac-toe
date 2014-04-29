@@ -1,5 +1,6 @@
 
 // Using NaN instead of null is a clever hack. See checkForWinner for details.
+// Add new comments
 var spaces = [
   NaN, NaN, NaN,
   NaN, NaN, NaN,
